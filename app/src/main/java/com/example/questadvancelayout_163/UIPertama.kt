@@ -11,7 +11,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import java.lang.reflect.Modifier
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
@@ -25,5 +24,11 @@ fun ActivitasPertama(modifier: Modifier){
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold
         )
+
+        Text(
+            text = stringResource(id = R.string.univ),
+            fontSize = 18.sp
+        )
+
     }
 }
