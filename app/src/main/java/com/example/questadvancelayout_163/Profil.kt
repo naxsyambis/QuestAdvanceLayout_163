@@ -26,6 +26,15 @@ fun Profil(modifier: Modifier = Modifier) {
             .padding(top = 100.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
+        Image(
+            painter = painterResource(id = R.drawable.saya),
+            contentDescription = "Foto Profil",
+            modifier = Modifier
+                .size(140.dp)
+                .clip(CircleShape)
+                .border(3.dp, Color.Gray,CircleShape),
+            contentScale = ContentScale.Crop
+        )
 
     }
 }
