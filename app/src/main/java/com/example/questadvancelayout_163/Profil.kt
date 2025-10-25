@@ -1,5 +1,6 @@
 package com.example.questadvancelayout_163
 
+import android.R.attr.font
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -13,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -25,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -125,10 +128,37 @@ fun Profil(modifier: Modifier = Modifier) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically
                     ){
+                        val gambar = painterResource(id = R.drawable.privacy)
+                        Image(
+                            painter = gambar,
+                            contentDescription = null,
+                            modifier = Modifier
+                                .size(60.dp)
+                                .padding(all = 5.dp)
+                        )
 
+                        Spacer(modifier = Modifier.width(20.dp))
+
+                        Text(
+                            text = stringResource(id = R.string.privacy),
+                            fontSize = 25.sp,
+                            fontFamily = FontFamily.Cursive,
+                            color = Color.Black
+                        )
                     }
+
+                    val iconDropdown = painterResource(id = R.drawable.dropdown)
+                    Image(
+                        painter = iconDropdown,
+                        contentDescription = "Dropdown Icon",
+                        modifier = Modifier
+                            .size(30.dp)
+                            .padding(end = 8.dp)
+                    )
                 }
             }
+
+            Spacer(modifier = Modifier.height(25.dp))
         }
     }
 }
