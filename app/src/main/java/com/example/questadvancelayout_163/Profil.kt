@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -45,6 +46,28 @@ fun Profil(modifier: Modifier = Modifier) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(24.dp),
             verticalAlignment = Alignment.CenterVertically
-        ){}
+        ){
+            val icons = listOf(
+                R.drawable.facebook,
+                R.drawable.google,
+                R.drawable.telegram,
+                R.drawable.linkedin
+            )
+
+            icons.forEach { icon ->
+                Box(
+                    modifier = Modifier
+                        .size(45.dp)
+                        .clip(CircleShape),
+                    contentAlignment = Alignment.Center
+                ){
+                    Image(
+                        painter = painterResource(id = icon),
+                        contentDescription = null,
+                        modifier = Modifier.size(35.dp)
+                    )
+                }
+            }
+        }
     }
 }
