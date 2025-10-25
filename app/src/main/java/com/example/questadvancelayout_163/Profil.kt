@@ -69,5 +69,14 @@ fun Profil(modifier: Modifier = Modifier) {
                 }
             }
         }
+
+        Column(
+            modifier = Modifier
+                .padding(top = 20.dp)
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+
+        }
     }
 }
